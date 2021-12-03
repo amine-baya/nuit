@@ -1,10 +1,23 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcryptjs'
 const userSchema = mongoose.Schema({
-    name: {
+    firstName: {
         type: String,
         required: true
     },
+    lastName: {
+        type: String,
+        required: true
+    },
+    phoneNumber: {
+        type: Number,
+        required: true, 
+        
+    },
+    image: {
+        type: Array
+        
+      },
     email: {
         type: String,
         required: true, 
@@ -14,11 +27,7 @@ const userSchema = mongoose.Schema({
         type: String
         
     },
-    isAdmin: {
-        type: Boolean,
-        required: true,
-        default: false
-    }
+  
 },{
     timestamps: true
 })
